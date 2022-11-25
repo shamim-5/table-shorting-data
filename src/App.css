@@ -1,0 +1,10 @@
+th{
+   background-color: #ffffff !important;
+   text-transform: capitalize !important;
+   border: 1px solid #E1E1E1;
+   border-radius: 0px !important;
+}
+
+td{
+   border: 1px solid #E1E1E1;
+}
