@@ -29,3 +29,4 @@ const FirstTableRow = ({ content }) => {
 };
 
 export default FirstTableRow;
+ 

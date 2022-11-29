@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useTestData() {
-  const [data, setData] = useState([]);
+  const [contents, setContents] = useState([]);
 
-  fetch("tableTestData.json")
-    .then((res) => res.json())
-    .then((data) => setData(data));
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("tableTestData.json");
+      const data = await res.json();
+      setContents(data);
+    };
 
-  return [data, setData];
+    getData();
+  }, []);
+
+  return [contents, setContents];
 }

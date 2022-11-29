@@ -1,7 +1,7 @@
 import React from "react";
 
 const SecondTableRow = ({ content }) => {
-  const { person, city, email, joiningDate, role } = content;
+  const {  email, joiningDate, role } = content;
 
   return (
     <tr>
