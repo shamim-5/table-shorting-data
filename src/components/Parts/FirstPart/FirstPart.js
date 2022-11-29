@@ -3,38 +3,10 @@ import useTestData from "../../hooks/useTestData";
 import FirstTableRow from "./FirstTableRow";
 
 const FirstPart = () => {
-  // const [contents] = useTestData();
-  // const [copy, setCopy] = useState([]);
-
-  // const [sorting, setSorting] = useState({ key: "city", ascending: true });
-
-  // useEffect(() => {
-  //   setCopy(contents);
-
-  //   if (contents.length) {
-  //     console.log(copy);
-  //     // copy.sort(function (a, b) {
-  //     //   let x = a.person.name.toLowerCase();
-  //     //   let y = b.person.name.toLowerCase();
-  //     //   if (x < y) {
-  //     //     return -1;
-  //     //   }
-  //     //   if (x > y) {
-  //     //     return 1;
-  //     //   }
-  //     //   return 0;
-  //     // });
-
-  //     copy.sort((a, b) => {
-  //       return a[sorting.key].localeCompare(b[sorting.key]);
-  //     });
-  //   }
-  // }, [contents, copy]);
-
   const [contents] = useTestData();
   const [sortedContents, setSortedContents] = useState([]);
 
-  const [sorting, setSorting] = useState({ key: "city", ascending: true });
+  const [sorting, setSorting] = useState({ key: "name", ascending: true });
   const [currentContents, setCurrentContents] = useState([]);
 
   useEffect(() => {
